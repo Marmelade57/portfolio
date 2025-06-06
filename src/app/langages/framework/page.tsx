@@ -2,25 +2,22 @@ import { Metadata } from "next";
 import content from "@/data/content.json";
 
 export const metadata: Metadata = {
-  title: "Formation",
+  title: "Langages - Frameworks",
 };
 
 export default function Page() {
-  const categories = {
-    bac: "Baccalauréat",
-    but: "BUT Informatique"
-  };
+  const frameworks = content.langages.framework;
 
   return (
     <main>
       <section>
         <article>
-          <h1>Formation</h1>
-          <p>Voici les différentes étapes de ma formation :</p>
+          <h1>Frameworks</h1>
+          <p>Voici les frameworks que j'utilise :</p>
           <ul>
-            {Object.entries(categories).map(([key, value]) => (
+            {Object.entries(frameworks).map(([key, value]) => (
               <li key={key}>
-                <a href={`/formation/${key}`}>{value}</a>
+                <a href={`/langages/framework/${key}`}>{key.toUpperCase()}</a>
               </li>
             ))}
           </ul>

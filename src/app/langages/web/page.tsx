@@ -2,25 +2,22 @@ import { Metadata } from "next";
 import content from "@/data/content.json";
 
 export const metadata: Metadata = {
-  title: "Formation",
+  title: "Langages - Web",
 };
 
 export default function Page() {
-  const categories = {
-    bac: "Baccalauréat",
-    but: "BUT Informatique"
-  };
+  const langages = content.langages.web;
 
   return (
     <main>
       <section>
         <article>
-          <h1>Formation</h1>
-          <p>Voici les différentes étapes de ma formation :</p>
+          <h1>Langages Web</h1>
+          <p>Voici les langages web que j'utilise :</p>
           <ul>
-            {Object.entries(categories).map(([key, value]) => (
+            {Object.entries(langages).map(([key, value]) => (
               <li key={key}>
-                <a href={`/formation/${key}`}>{value}</a>
+                <a href={`/langages/web/${key}`}>{key.toUpperCase()}</a>
               </li>
             ))}
           </ul>

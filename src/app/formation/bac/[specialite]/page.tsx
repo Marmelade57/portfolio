@@ -1,11 +1,46 @@
-import content from '@/data/content.json';
+import { Metadata } from "next";
+import content from "@/data/content.json";
 
-export default function BacSpecialityPage({ params }: { params: { specialite: string } }) {
-  const contentHtml = content.formation.bac[params.specialite as keyof typeof content.formation.bac];
-  
+type Props = {
+  params: { specialite: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const specialite = params.specialite;
+  const contenu = content.formation.bac[specialite as keyof typeof content.formation.bac];
+
+  if (!contenu) {
+    return {
+      title: "Spécialité non trouvée",
+    };
+  }
+
+  return {
+    title: `Bac - ${specialite.toUpperCase()}`,
+  };
+}
+
+export default function Page({ params }: Props) {
+  const specialite = params.specialite;
+  const contenu = content.formation.bac[specialite as keyof typeof content.formation.bac];
+
+  if (!contenu) {
+    return (
+      <main>
+        <section>
+          <article>
+            <p>Cette spécialité n'existe pas.</p>
+          </article>
+        </section>
+      </main>
+    );
+  }
+
   return (
-    <div className="container mx-auto p-4">
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-    </div>
+    <main>
+      <section>
+        <article dangerouslySetInnerHTML={{ __html: contenu }} />
+      </section>
+    </main>
   );
 } 

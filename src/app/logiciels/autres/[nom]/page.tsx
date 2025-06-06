@@ -7,29 +7,29 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const nom = params.nom;
-  const contenu = content.langages.web[nom as keyof typeof content.langages.web];
+  const contenu = content.logiciels.autres[nom as keyof typeof content.logiciels.autres];
 
   if (!contenu) {
     return {
-      title: "Langage non trouvé",
+      title: "Logiciel non trouvé",
     };
   }
 
   return {
-    title: `Langage Web - ${nom.toUpperCase()}`,
+    title: `Logiciel - ${nom.toUpperCase()}`,
   };
 }
 
 export default function Page({ params }: Props) {
   const nom = params.nom;
-  const contenu = content.langages.web[nom as keyof typeof content.langages.web];
+  const contenu = content.logiciels.autres[nom as keyof typeof content.logiciels.autres];
 
   if (!contenu) {
     return (
       <main>
         <section>
           <article>
-            <p>Ce langage n'existe pas.</p>
+            <p>Ce logiciel n'existe pas.</p>
           </article>
         </section>
       </main>

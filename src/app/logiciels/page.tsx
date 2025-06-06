@@ -1,56 +1,33 @@
-import content from '@/data/content.json';
+import { Metadata } from "next";
+import content from "@/data/content.json";
 
-export default function LogicielsPage() {
+export const metadata: Metadata = {
+  title: "Logiciels",
+};
+
+export default function Page() {
+  const categories = {
+    "traitement-des-images": "Traitement d'Images",
+    "ide": "Environnements de Développement",
+    "sgbd": "Systèmes de Gestion de Bases de Données",
+    "autres": "Autres Logiciels"
+  };
+
   return (
-    <>
-      <div className="p-4 border rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">Traitement des images</h2>
-        <ul className="space-y-2">
-          {Object.keys(content.logiciels['traitement-des-images']).map((software) => (
-            <li key={software}>
-              <a href={`/logiciels/traitement-des-images/${software}`} className="text-blue-600 hover:underline">
-                {software}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">IDE</h2>
-        <ul className="space-y-2">
-          {Object.keys(content.logiciels.ide).map((software) => (
-            <li key={software}>
-              <a href={`/logiciels/ide/${software}`} className="text-blue-600 hover:underline">
-                {software}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">SGBD</h2>
-        <ul className="space-y-2">
-          {Object.keys(content.logiciels.sgbd).map((software) => (
-            <li key={software}>
-              <a href={`/logiciels/sgbd/${software}`} className="text-blue-600 hover:underline">
-                {software}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 border rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">Autres</h2>
-        <ul className="space-y-2">
-          {Object.keys(content.logiciels.autres).map((software) => (
-            <li key={software}>
-              <a href={`/logiciels/autres/${software}`} className="text-blue-600 hover:underline">
-                {software}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+    <main>
+      <section>
+        <article>
+          <h1>Logiciels</h1>
+          <p>Voici les différentes catégories de logiciels que j'utilise :</p>
+          <ul>
+            {Object.entries(categories).map(([key, value]) => (
+              <li key={key}>
+                <a href={`/logiciels/${key}`}>{value}</a>
+              </li>
+            ))}
+          </ul>
+        </article>
+      </section>
+    </main>
   );
 } 

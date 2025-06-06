@@ -2,25 +2,22 @@ import { Metadata } from "next";
 import content from "@/data/content.json";
 
 export const metadata: Metadata = {
-  title: "Formation",
+  title: "Formation - BUT Informatique",
 };
 
 export default function Page() {
-  const categories = {
-    bac: "Baccalauréat",
-    but: "BUT Informatique"
-  };
+  const annees = content.formation.but;
 
   return (
     <main>
       <section>
         <article>
-          <h1>Formation</h1>
-          <p>Voici les différentes étapes de ma formation :</p>
+          <h1>BUT Informatique</h1>
+          <p>Voici les différentes années de mon BUT Informatique :</p>
           <ul>
-            {Object.entries(categories).map(([key, value]) => (
+            {Object.entries(annees).map(([key, value]) => (
               <li key={key}>
-                <a href={`/formation/${key}`}>{value}</a>
+                <a href={`/formation/but/${key}`}>{key.replace("annee-", "Année ")}</a>
               </li>
             ))}
           </ul>

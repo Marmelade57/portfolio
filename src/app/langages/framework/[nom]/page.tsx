@@ -1,11 +1,46 @@
+import { Metadata } from "next";
 import content from '@/data/content.json';
 
-export default function FrameworkPage({ params }: { params: { nom: string } }) {
-  const contentHtml = content.langages.framework[params.nom as keyof typeof content.langages.framework];
-  
+type Props = {
+  params: { nom: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const nom = params.nom;
+  const contenu = content.langages.framework[nom as keyof typeof content.langages.framework];
+
+  if (!contenu) {
+    return {
+      title: "Framework non trouvé",
+    };
+  }
+
+  return {
+    title: `Framework - ${nom.toUpperCase()}`,
+  };
+}
+
+export default function Page({ params }: Props) {
+  const nom = params.nom;
+  const contenu = content.langages.framework[nom as keyof typeof content.langages.framework];
+
+  if (!contenu) {
+    return (
+      <main>
+        <section>
+          <article>
+            <p>Ce framework n'existe pas.</p>
+          </article>
+        </section>
+      </main>
+    );
+  }
+
   return (
-    <div className="container mx-auto p-4">
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-    </div>
+    <main>
+      <section>
+        <article dangerouslySetInnerHTML={{ __html: contenu }} />
+      </section>
+    </main>
   );
 } 
