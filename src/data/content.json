@@ -1,0 +1,68 @@
+{
+  "langages": {
+    "web": {
+      "html": "<h1>HTML</h1><p>Le HTML (HyperText Markup Language) est le langage de balisage standard pour créer des pages web. Il permet de structurer le contenu d'une page avec des éléments comme les titres, paragraphes, listes, liens, images, etc.</p>",
+      "css": "<h1>CSS</h1><p>Le CSS (Cascading Style Sheets) est un langage de style utilisé pour décrire la présentation d'un document écrit en HTML. Il permet de contrôler la mise en page, les couleurs, les polices et d'autres aspects visuels.</p>",
+      "javascript": "<h1>JavaScript</h1><p>JavaScript est un langage de programmation de scripts principalement utilisé dans les pages web interactives. Il permet d'ajouter des comportements dynamiques aux pages web.</p>",
+      "php": "<h1>PHP</h1><p>PHP est un langage de programmation libre, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP.</p>",
+      "sql": "<h1>SQL</h1><p>SQL (Structured Query Language) est un langage de requête utilisé pour gérer et manipuler les bases de données relationnelles.</p>"
+    },
+    "programmation": {
+      "python": "<h1>Python</h1><p>Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.</p>",
+      "java": "<h1>Java</h1><p>Java est un langage de programmation orienté objet créé par James Gosling et Patrick Naughton. Il est conçu pour être portable sur différentes plateformes.</p>",
+      "c": "<h1>C</h1><p>Le langage C est un langage de programmation impératif généraliste, de bas niveau. Il est l'un des langages les plus utilisés et reste très proche du matériel.</p>"
+    },
+    "framework": {
+      "nextjs": "<h1>Next.js</h1><p>Next.js est un framework React qui permet de créer des applications web avec rendu côté serveur et génération de sites statiques.</p>",
+      "tailwind": "<h1>Tailwind CSS</h1><p>Tailwind CSS est un framework CSS utilitaire qui permet de créer des designs personnalisés directement dans votre balisage HTML.</p>",
+      "flutter": "<h1>Flutter</h1><p>Flutter est un framework de développement d'applications mobiles multiplateformes créé par Google.</p>"
+    },
+    "mobile": {
+      "shadcn": "<h1>Shadcn</h1><p>Shadcn est une collection de composants réutilisables construits avec Radix UI et Tailwind CSS.</p>",
+      "lucide": "<h1>Lucide</h1><p>Lucide est une bibliothèque d'icônes open-source avec plus de 1000 icônes personnalisables.</p>"
+    }
+  },
+  "logiciels": {
+    "traitement-des-images": {
+      "inkscape": "<h1>Inkscape</h1><p>Inkscape est un logiciel libre de dessin vectoriel, similaire à Adobe Illustrator.</p>",
+      "gimp": "<h1>Gimp</h1><p>GIMP est un logiciel de retouche d'image, similaire à Adobe Photoshop.</p>"
+    },
+    "ide": {
+      "vscode": "<h1>VSCode</h1><p>Visual Studio Code est un éditeur de code source développé par Microsoft.</p>",
+      "cursor": "<h1>Cursor</h1><p>Cursor est un éditeur de code moderne basé sur VSCode avec des fonctionnalités d'IA intégrées.</p>"
+    },
+    "sgbd": {
+      "mysql": "<h1>MySQL</h1><p>MySQL est un système de gestion de bases de données relationnelles.</p>",
+      "sqlite": "<h1>SQLite</h1><p>SQLite est un moteur de base de données relationnelle qui est intégré dans le système.</p>",
+      "phpmyadmin": "<h1>PHPMyAdmin</h1><p>PHPMyAdmin est une application web de gestion pour MySQL et MariaDB.</p>"
+    },
+    "autres": {
+      "git": "<h1>Git</h1><p>Git est un système de contrôle de version distribué.</p>",
+      "github": "<h1>GitHub</h1><p>GitHub est une plateforme d'hébergement de code pour le contrôle de version et la collaboration.</p>",
+      "docker": "<h1>Docker</h1><p>Docker est une plateforme pour développer, expédier et exécuter des applications dans des conteneurs.</p>",
+      "vercel": "<h1>Vercel</h1><p>Vercel est une plateforme de déploiement et d'hébergement pour les applications web.</p>"
+    }
+  },
+  "projets": {
+    "personnels": {
+      "projet-1": "<h1>Projet Personnel 1</h1><p>Description détaillée du premier projet personnel.</p>",
+      "projet-2": "<h1>Projet Personnel 2</h1><p>Description détaillée du deuxième projet personnel.</p>"
+    },
+    "scolaires": {
+      "projet-1": "<h1>Projet Scolaire 1</h1><p>Description détaillée du premier projet scolaire.</p>",
+      "projet-2": "<h1>Projet Scolaire 2</h1><p>Description détaillée du deuxième projet scolaire.</p>"
+    }
+  },
+  "formation": {
+    "bac": {
+      "nsi": "<h1>Spécialité NSI</h1><p>La spécialité Numérique et Sciences Informatiques du baccalauréat.</p>",
+      "llcer": "<h1>Spécialité LLCER</h1><p>La spécialité Langues, Littératures et Cultures Étrangères et Régionales.</p>",
+      "mathematiques": "<h1>Spécialité Mathématiques</h1><p>La spécialité Mathématiques du baccalauréat.</p>"
+    },
+    "but": {
+      "annee-1": "<h1>Première année BUT Informatique</h1><p>Description du programme de la première année.</p>",
+      "annee-2": "<h1>Deuxième année BUT Informatique</h1><p>Description du programme de la deuxième année.</p>",
+      "annee-3": "<h1>Troisième année BUT Informatique</h1><p>Description du programme de la troisième année.</p>"
+    }
+  }
+} 

@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+:root {
+  --background: #c184c0;
+  --foreground: #e8d48c;
+  --noir: #131212;
+  --blanc : #f5f0f0;
+  --arrondi : 2svh;
+  margin: 0;
+  padding: 0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--noir);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  width: 100svw;
+  background-color: #fff;
+  height: 16svh;
+  margin-bottom: 5svh;
+  display: inline-flex;
+  box-shadow: 0 10px 10px 5px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+header img{
+  margin: var(--arrondi);
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 12svh;
+}
+
+header>div{
+  margin: auto;
+  width:80vsw;
+  font-size: x-large;
+}
+header>div div a{
+  margin-left: calc(5*var(--arrondi));
+}
+
+main{
+  max-width: 1000px;
+  margin: auto;
+}
+
+section{
+  padding: var(--arrondi);
+  background-color: var(--blanc);
+  border: var(--noir) 1px solid;
+  border-radius: var(--arrondi);
+  margin-bottom: 5svh;
+}
+
+article{
+  margin-bottom: calc(0.5*var(--arrondi));
+  padding: var(--arrondi);
+  border-top: lightgray calc(0.15*var(--arrondi)) solid;
+}
+
+a{
+  text-decoration: underline solid 1px var(--noir);
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: calc(0.5*var(--arrondi));
+}
+
+h1{
+  font-size: x-large;
+}
+
+h2{
+  font-size: larger;
+  margin-left: calc(0.5*var(--arrondi));
+}
+
+h3{
+  font-size: large;
+  margin-left: var(--arrondi);
+  margin-top: var(--arrondi);
+}
+
+h4{
+  font-size: medium;
+}
+
+h5{
+  font-size: small;
+}
+
+h6{
+  font-size: smaller;
+}
+
+ul, ol, li{
+  list-style: circle;
+  margin-left: var(--arrondi);
+}
+
+img.carre{
+  aspect-ratio: 1/1;
+}
+
+.titreFunky::before, .titreFunky::after{
+  content: " ~ ~ ~ ~ ~ ~ ~ ~ ";
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item > a::after {
+  content: "▼";
+  font-size: 0.8em;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+.sousmenu {
+  position: absolute;
+  display: none;
+  width: 12.5rem;
+  background-color: var(--blanc);
+  border: var(--noir) 1px solid;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  z-index: 10;
+  left: 25%;
+  top: 100%;
+  padding: 0;
+}
+
+.sousmenu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  margin: 0;
+  font-size: large;
+}
+
+.sousmenu .menu-item > a::after {
+  content: "▶";
+  font-size: 0.8em;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+.soussousmenu {
+  position: absolute;
+  border: var(--noir) 1px solid;
+  display: none;
+  width: 12.5rem;
+  background-color: var(--blanc);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  z-index: 10;
+  left: 100%;
+  top: -1%;
+  padding: 0;
+}
+
+.soussousmenu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  margin: 0;
+  font-size: large;
+}
+
+/* Affichage des sous-menus au survol */
+.menu-item:hover > .sousmenu {
+  display: block;
+}
+
+/* Affichage des sous-sous-menus au survol */
+.menu-item:hover > .soussousmenu {
+  display: block;
+}
+
+.competences img{
+  height: 30px;
+  border-bottom: 1px solid var(--noir);
+}
