@@ -1,45 +1,18 @@
 import { Metadata } from "next";
-import content from "@/data/content.json";
 
-type Props = {
-  params: { nom: string };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const nom = params.nom;
-  const contenu = content.projets.personnels[nom as keyof typeof content.projets.personnels];
-
-  if (!contenu) {
-    return {
-      title: "Projet non trouvé",
-    };
-  }
-
+export async function generateMetadata({ params }: { params: { nom: string } }): Promise<Metadata> {
   return {
-    title: `Projet Personnel - ${nom.toUpperCase()}`,
+    title: `Projet Personnel - ${params.nom.toUpperCase()}`,
   };
 }
 
-export default function Page({ params }: Props) {
-  const nom = params.nom;
-  const contenu = content.projets.personnels[nom as keyof typeof content.projets.personnels];
-
-  if (!contenu) {
-    return (
-      <main>
-        <section>
-          <article>
-            <p>Ce projet n'existe pas.</p>
-          </article>
-        </section>
-      </main>
-    );
-  }
-
+export default function Page() {
   return (
     <main>
       <section>
-        <article dangerouslySetInnerHTML={{ __html: contenu }} />
+        <article>
+          <p>Cette page est en construction</p>
+        </article>
       </section>
     </main>
   );
