@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Bac - ${specialite.toUpperCase()}`,
+    title: `Spécialité - ${specialite.toUpperCase()}`,
   };
 }
 

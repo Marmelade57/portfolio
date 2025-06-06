@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import content from '@/data/content.json';
+import content from "@/data/content.json";
 
 type Props = {
   params: { nom: string };

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `BUT - ${annee.replace("annee-", "Année ")}`,
+    title: `BUT - ${annee.toUpperCase()}`,
   };
 }
 

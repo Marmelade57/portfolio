@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Projet Personnel - ${nom.split("-")[1]}`,
+    title: `Projet Personnel - ${nom.toUpperCase()}`,
   };
 }
 
