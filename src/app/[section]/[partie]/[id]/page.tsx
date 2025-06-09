@@ -3,15 +3,6 @@ import content from "@/data/content.json";
 import { notFound } from "next/navigation";
 import { ExternalLink } from 'lucide-react';
 
-type PageProps = {
-  params: {
-    section: string;
-    partie: string;
-    id: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
 type ContentItem = {
   nom: string;
   description: string;
@@ -35,7 +26,9 @@ type ContentSection = {
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: {
+  params: { section: string; partie: string; id: string };
+}): Promise<Metadata> {
   const { section, partie, id } = params;
 
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
@@ -55,7 +48,11 @@ export async function generateMetadata({
   };
 }
 
-export default function DetailPage({ params }: PageProps) {
+export default function DetailPage({
+  params,
+}: {
+  params: { section: string; partie: string; id: string };
+}) {
   const { section, partie, id } = params;
 
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
