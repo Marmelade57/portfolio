@@ -2,9 +2,9 @@ import content from "@/data/content.json";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-type PageParams = {
-  section: string;
-};
+type PageParams = Promise<{
+  [key: string]: string | string[] | undefined;
+}>;
 
 type ContentSection = {
   [key: string]: {
@@ -22,7 +22,8 @@ type ContentSection = {
 };
 
 export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
-  const section = params.section;
+  const resolvedParams = await params;
+  const section = resolvedParams.section as string;
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
 
   if (!sectionData) {
@@ -38,8 +39,9 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
   };
 }
 
-export default function SectionPage({ params }: { params: PageParams }) {
-  const section = params.section;
+export default async function SectionPage({ params }: { params: PageParams }) {
+  const resolvedParams = await params;
+  const section = resolvedParams.section as string;
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
 
   if (!sectionData) {
