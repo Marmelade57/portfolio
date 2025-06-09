@@ -24,17 +24,20 @@ type ContentSection = {
   [key: string]: ContentPart;
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { section: string; partie: string; id: string };
-}): Promise<Metadata> {
-  const { section, partie, id } = params;
+type RouteParams = {
+  section: string;
+  partie: string;
+  id: string;
+};
 
+function getItemData(params: RouteParams): ContentItem | undefined {
+  const { section, partie, id } = params;
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
   const partieData = sectionData?.[partie];
-  const itemData = partieData?.[id] as ContentItem | undefined;
+  return partieData?.[id] as ContentItem | undefined;
+}
 
+function generatePageMetadata(itemData: ContentItem | undefined, partie: string): Metadata {
   if (!itemData) {
     return {
       title: "Page non trouvée",
@@ -48,23 +51,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { section: string; partie: string; id: string };
-}) {
-  const { section, partie, id } = params;
-
-  const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
-  const partieData = sectionData?.[partie];
-  const itemData = partieData?.[id] as ContentItem | undefined;
-
-  if (!itemData) {
-    notFound();
-  }
-
+function ItemContent({ itemData }: { itemData: ContentItem }) {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 w-[50svw]">
       <h1 className="titreFunky text-center mb-8">{itemData.nom}</h1>
       <p className="text-lg mb-8">{itemData.description}</p>
 
@@ -158,4 +147,19 @@ export default async function Page({
       </div>
     </div>
   );
+}
+
+export async function generateMetadata({ params }: { params: RouteParams }): Promise<Metadata> {
+  const itemData = getItemData(params);
+  return generatePageMetadata(itemData, params.partie);
+}
+
+export default function Page({ params }: { params: RouteParams }) {
+  const itemData = getItemData(params);
+
+  if (!itemData) {
+    notFound();
+  }
+
+  return <ItemContent itemData={itemData} />;
 }
