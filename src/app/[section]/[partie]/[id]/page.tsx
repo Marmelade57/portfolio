@@ -24,11 +24,15 @@ type ContentSection = {
   [key: string]: ContentPart;
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { section: string; partie: string; id: string };
-}): Promise<Metadata> {
+type Props = {
+  params: {
+    section: string;
+    partie: string;
+    id: string;
+  };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { section, partie, id } = params;
 
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
@@ -48,11 +52,7 @@ export async function generateMetadata({
   };
 }
 
-export default function DetailPage({
-  params,
-}: {
-  params: { section: string; partie: string; id: string };
-}) {
+export default function DetailPage({ params }: Props) {
   const { section, partie, id } = params;
 
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
