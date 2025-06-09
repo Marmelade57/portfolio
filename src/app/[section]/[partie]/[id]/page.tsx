@@ -24,14 +24,11 @@ type ContentSection = {
   [key: string]: ContentPart;
 };
 
-type PageParams = {
-  section: string;
-  partie: string;
-  id: string;
-};
+function getItemData(params: { [key: string]: string | string[] | undefined }): ContentItem | undefined {
+  const section = params.section as string;
+  const partie = params.partie as string;
+  const id = params.id as string;
 
-function getItemData(params: PageParams): ContentItem | undefined {
-  const { section, partie, id } = params;
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
   const partieData = sectionData?.[partie];
   return partieData?.[id] as ContentItem | undefined;
@@ -149,12 +146,12 @@ function ItemContent({ itemData }: { itemData: ContentItem }) {
   );
 }
 
-export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { [key: string]: string | string[] | undefined } }): Promise<Metadata> {
   const itemData = getItemData(params);
-  return generatePageMetadata(itemData, params.partie);
+  return generatePageMetadata(itemData, params.partie as string);
 }
 
-export default function Page({ params }: { params: PageParams }) {
+export default function Page({ params }: { params: { [key: string]: string | string[] | undefined } }) {
   const itemData = getItemData(params);
 
   if (!itemData) {
