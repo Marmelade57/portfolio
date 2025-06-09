@@ -53,15 +53,6 @@ export default function Blog() {
               <div>
                 <p>L'esperanto</p>
               </div>
-              <div>
-                <div className="typewriter">
-                  <div className="slide">
-                    <i></i>
-                  </div>
-                  <div className="paper"></div>
-                  <div className="keyboard"></div>
-                </div>
-              </div>
               <div className="checkbox-wrapper-5">
                 <div className="check">
                   <input id="check-5" type="checkbox" />
@@ -79,7 +70,17 @@ export default function Blog() {
                   </div>
                 </div>
               </div>
+              <div>
+                <div className="typewriter">
+                  <div className="slide">
+                    <i></i>
+                  </div>
+                  <div className="paper"></div>
+                  <div className="keyboard"></div>
+                </div>
+              </div>
             </div>
+            
           </article>
         </section>
       </main>

@@ -1,7 +1,8 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: "Blog",
+  description: "Articles sur divers sujets"
 };
 
 export default function BlogLayout({

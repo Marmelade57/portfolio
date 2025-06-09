@@ -48,11 +48,11 @@ header img{
 
 header>div{
   margin: auto;
-  width:80vsw;
+  width:80svw;
   font-size: x-large;
 }
 header>div div a{
-  margin-left: calc(5*var(--arrondi));
+  margin-left: calc(4*var(--arrondi));
 }
 
 main{
@@ -63,7 +63,7 @@ main{
 section{
   padding: var(--arrondi);
   background-color: var(--blanc);
-  border: var(--noir) 1px solid;
+  /* border: var(--noir) 1px solid; */
   border-radius: var(--arrondi);
   margin-bottom: 5svh;
 }
@@ -196,4 +196,13 @@ img.carre{
 .competences img{
   height: 30px;
   border-bottom: 1px solid var(--noir);
+}
+
+.separator {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--noir);
+  margin: 0.5rem 0;
+  opacity: 0.2;
 }

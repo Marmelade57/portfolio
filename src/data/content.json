@@ -1,76 +1,361 @@
 {
   "langages": {
     "web": {
-      "html5": "<h1>HTML5</h1><p>Le HTML5 est la dernière version majeure du langage HTML. Il introduit de nouvelles fonctionnalités comme l'audio et la vidéo natives, le canvas pour le dessin, et des éléments sémantiques améliorés pour une meilleure structure des pages web.</p>",
-      "css3": "<h1>CSS3</h1><p>CSS3 est la dernière version des feuilles de style en cascade. Elle apporte des fonctionnalités avancées comme les animations, les transitions, les transformations, les dégradés et les media queries pour le responsive design.</p>",
-      "javascript": "<h1>JavaScript</h1><p>JavaScript est un langage de programmation de scripts principalement utilisé dans les pages web interactives. Il permet d'ajouter des comportements dynamiques aux pages web et est devenu essentiel pour le développement web moderne.</p>",
-      "php": "<h1>PHP</h1><p>PHP est un langage de programmation libre, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP. Il est particulièrement adapté pour le développement web et peut être intégré dans le HTML.</p>",
-      "typescript": "<h1>TypeScript</h1><p>TypeScript est un sur-ensemble syntaxique de JavaScript qui ajoute le typage statique. Il permet de détecter les erreurs plus tôt dans le développement et améliore la maintenabilité du code.</p>"
+      "HTML5": {
+        "nom": "HTML5",
+        "description": "Le HTML5 est la dernière version majeure du langage HTML. Il introduit de nouvelles fonctionnalités comme l'audio et la vidéo natives, le canvas pour le dessin, et des éléments sémantiques améliorés pour une meilleure structure des pages web.",
+        "niveau": "Avancé",
+        "projets": ["Portfolio", "SAE 1.05 - 1.06", "SAE 2.01", "SAE 2.05 - 2.06", "SAE 4.01"]
+      },
+      "CSS3": {
+        "nom": "CSS3",
+        "description": "CSS3 est la dernière version des feuilles de style en cascade. Elle apporte des fonctionnalités avancées comme les animations, les transitions, les transformations, les dégradés et les media queries pour le responsive design.",
+        "niveau": "Avancé",
+        "projets": ["Portfolio", "SAE 1.05 - 1.06", "SAE 2.01", "SAE 2.05 - 2.06", "SAE 4.01"]
+      },
+      "JavaScript": {
+        "nom": "JavaScript",
+        "description": "JavaScript est un langage de programmation de scripts principalement utilisé dans les pages web interactives. Il permet d'ajouter des comportements dynamiques aux pages web et est devenu essentiel pour le développement web moderne.",
+        "niveau": "Intermédiaire",
+        "projets": ["SAE 2.05 - 2.06", "SAE 4.01"]
+      },
+      "PHP": {
+        "nom": "PHP",
+        "description": "PHP est un langage de programmation libre, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP. Il est particulièrement adapté pour le développement web et peut être intégré dans le HTML.",
+        "niveau": "Débutant",
+        "projets": ["SAE 2.05 - 2.06", "SAE 3.01"]
+      },
+      "TypeScript": {
+        "nom": "TypeScript",
+        "description": "TypeScript est un sur-ensemble syntaxique de JavaScript qui ajoute le typage statique. Il permet de détecter les erreurs plus tôt dans le développement et améliore la maintenabilité du code.",
+        "niveau": "Intermédiaire",
+        "projets": ["Portfolio", "SAE 2.01", "SAE 2.02"]
+      }
     },
     "programmation": {
-      "python": "<h1>Python</h1><p>Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il est apprécié pour sa syntaxe claire et sa grande bibliothèque standard.</p>",
-      "java": "<h1>Java</h1><p>Java est un langage de programmation orienté objet créé par James Gosling. Il est conçu pour être portable sur différentes plateformes grâce à la JVM.</p>",
-      "c": "<h1>C</h1><p>Le langage C est un langage de programmation impératif généraliste, de bas niveau. Il est l'un des langages les plus utilisés et reste très proche du matériel.</p>",
-      "bash": "<h1>Bash</h1><p>Bash est un shell Unix et un langage de script. Il est largement utilisé pour l'automatisation des tâches système et le développement de scripts.</p>",
-      "sql": "<h1>SQL</h1><p>SQL (Structured Query Language) est un langage de requête utilisé pour gérer et manipuler les bases de données relationnelles. Il permet de créer, lire, mettre à jour et supprimer des données.</p>",
-      "markdown": "<h1>Markdown</h1><p>Markdown est un langage de balisage léger créé pour faciliter l'écriture et la lecture de documents. Il est largement utilisé pour la documentation et les plateformes comme GitHub.</p>"
+      "Python": {
+        "nom": "Python",
+        "description": "Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il est apprécié pour sa syntaxe claire et sa grande bibliothèque standard.",
+        "niveau": "Intermédiaire",
+        "projets": []
+      },
+      "Java": {
+        "nom": "Java",
+        "description": "Java est un langage de programmation orienté objet créé par James Gosling. Il est conçu pour être portable sur différentes plateformes grâce à la JVM.",
+        "niveau": "Débutant",
+        "projets": []
+      },
+      "C": {
+        "nom": "C",
+        "description": "Le langage C est un langage de programmation impératif généraliste, de bas niveau. Il est l'un des langages les plus utilisés et reste très proche du matériel.",
+        "niveau": "Débutant",
+        "projets": ["SAE 1.01", "SAE 1.02"]
+      },
+      "Bash": {
+        "nom": "Bash",
+        "description": "Bash est un shell Unix et un langage de script. Il est largement utilisé pour l'automatisation des tâches système et le développement de scripts.",
+        "niveau": "Débutant",
+        "projets": ["SAE 1.03"]
+      },
+      "SQL": {
+        "nom": "SQL",
+        "description": "SQL (Structured Query Language) est un langage de requête utilisé pour gérer et manipuler les bases de données relationnelles. Il permet de créer, lire, mettre à jour et supprimer des données.",
+        "niveau": "Avancé",
+        "projets": ["SAE 1.04", "SAE 2.04", "SAE 3.01"]
+      },
+      "Markdown": {
+        "nom": "Markdown",
+        "description": "Markdown est un langage de balisage léger créé pour faciliter l'écriture et la lecture de documents. Il est largement utilisé pour la documentation et les plateformes comme GitHub.",
+        "niveau": "Avancé",
+        "projets": []
+      }
     },
     "framework": {
-      "nextjs": "<h1>Next.js</h1><p>Next.js est un framework React qui permet de créer des applications web avec rendu côté serveur et génération de sites statiques. Il offre des fonctionnalités avancées comme le routage et l'optimisation des images.</p>",
-      "tailwindcss": "<h1>Tailwind CSS</h1><p>Tailwind CSS est un framework CSS utilitaire qui permet de créer des designs personnalisés directement dans votre balisage HTML. Il favorise une approche atomique du CSS.</p>",
-      "flutter": "<h1>Flutter</h1><p>Flutter est un framework de développement d'applications mobiles multiplateformes créé par Google. Il utilise le langage Dart et permet de créer des applications natives performantes.</p>",
-      "shadcnui": "<h1>shadcn/ui</h1><p>shadcn/ui est une collection de composants réutilisables construits avec Radix UI et Tailwind CSS. Il offre des composants accessibles et personnalisables.</p>",
-      "lucide": "<h1>Lucide</h1><p>Lucide est une bibliothèque d'icônes open-source avec plus de 1000 icônes personnalisables. Elle est compatible avec de nombreux frameworks et outils.</p>"
+      "Next.js": {
+        "nom": "Next.js",
+        "description": "Next.js est un framework React qui permet de créer des applications web avec rendu côté serveur et génération de sites statiques. Il offre des fonctionnalités avancées comme le routage et l'optimisation des images.",
+        "niveau": "Intermédiaire",
+        "projets": ["Portfolio", "Stage 2A"]
+      },
+      "TailwindCSS": {
+        "nom": "Tailwind CSS",
+        "description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des designs personnalisés directement dans votre balisage HTML. Il favorise une approche atomique du CSS.",
+        "niveau": "Intermédiaire",
+        "projets": ["Portfolio", "Stage 2A"]
+      },
+      "Flutter": {
+        "nom": "Flutter",
+        "description": "Flutter est un framework de développement d'applications mobiles multiplateformes créé par Google. Il utilise le langage Dart et permet de créer des applications natives performantes.",
+        "niveau": "Débutant",
+        "projets": ["SAE 3.01"]
+      },
+      "ShadcnUi": {
+        "nom": "shadcn/ui",
+        "description": "shadcn/ui est une collection de composants réutilisables construits avec Radix UI et Tailwind CSS. Il offre des composants accessibles et personnalisables.",
+        "niveau": "",
+        "projets": ["Portfolio", "Stage 2A"]
+      },
+      "Lucide": {
+        "nom": "Lucide",
+        "description": "Lucide est une bibliothèque d'icônes open-source avec plus de 1000 icônes personnalisables. Elle est compatible avec de nombreux frameworks et outils.",
+        "niveau": "",
+        "projets": ["Portfolio", "Stage 2A"]
+      }
     },
     "mobile": {
-      "dart": "<h1>Dart</h1><p>Dart est un langage de programmation développé par Google, principalement utilisé pour le développement d'applications Flutter. Il combine les meilleures fonctionnalités des langages orientés objet.</p>"
+      "Dart": {
+        "nom": "Dart",
+        "description": "Dart est un langage de programmation développé par Google, principalement utilisé pour le développement d'applications Flutter. Il combine les meilleures fonctionnalités des langages orientés objet.",
+        "niveau": "Débutant",
+        "projets": ["SAE 3.01"]
+      }
     }
   },
   "logiciels": {
     "traitement-des-images": {
-      "inkscape": "<h1>Inkscape</h1><p>Inkscape est un logiciel libre de dessin vectoriel, similaire à Adobe Illustrator. Il est idéal pour la création de logos, illustrations et graphiques vectoriels.</p>",
-      "gimp": "<h1>Gimp</h1><p>GIMP est un logiciel de retouche d'image, similaire à Adobe Photoshop. Il offre des outils puissants pour la manipulation d'images et la création graphique.</p>",
-      "canva": "<h1>Canva</h1><p>Canva est une plateforme de design graphique en ligne qui permet de créer facilement des visuels professionnels avec des modèles prédéfinis.</p>"
+      "Inkscape": {
+        "nom": "Inkscape",
+        "description": "Inkscape est un logiciel libre de dessin vectoriel, similaire à Adobe Illustrator. Il est idéal pour la création de logos, illustrations et graphiques vectoriels.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Création graphique",
+        "projets": ["Portfolio", "Stage 2A"]
+      },
+      "Gimp": {
+        "nom": "Gimp",
+        "description": "GIMP est un logiciel de retouche d'image, similaire à Adobe Photoshop. Il offre des outils puissants pour la manipulation d'images et la création graphique.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Retouche photo"
+      },
+      "Canva": {
+        "nom": "Canva",
+        "description": "Canva est une plateforme de design graphique en ligne qui permet de créer facilement des visuels professionnels avec des modèles prédéfinis.",
+        "niveau": "Avancé",
+        "utilisation": "Design graphique"
+      }
     },
-    "ide": {
-      "vscode": "<h1>VSCode</h1><p>Visual Studio Code est un éditeur de code source développé par Microsoft. Il est extensible, léger et offre de nombreuses fonctionnalités pour le développement.</p>",
-      "vercel": "<h1>Vercel</h1><p>Vercel est une plateforme de déploiement et d'hébergement pour les applications web. Elle est particulièrement adaptée pour les projets Next.js et offre un déploiement continu.</p>"
+    "IDE": {
+      "VSCode": {
+        "nom": "Visual Studio Code",
+        "description": "Visual Studio Code est un éditeur de code source développé par Microsoft. Il est extensible, léger et offre de nombreuses fonctionnalités pour le développement.",
+        "niveau": "Avancé",
+        "utilisation": "Développement web et applications",
+        "projets": ["Portfolio", "SAE 1.01", "SAE 1.02", "SAE 1.03", "SAE 1.05 - 1.06", "SAE 2.01", "SAE 2.02", "SAE 2.03", "SAE 2.05 - 2.06", "SAE 3.01", "SAE 4.01", "Stage 2A"]
+      },
+      "Vercel": {
+        "nom": "Vercel",
+        "description": "Vercel est une plateforme de déploiement et d'hébergement pour les applications web. Elle est particulièrement adaptée pour les projets Next.js et offre un déploiement continu.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Déploiement web",
+        "projets": ["Portfolio", "Stage 2A"]
+      }
     },
-    "sgbd": {
-      "mysql": "<h1>MySQL</h1><p>MySQL est un système de gestion de bases de données relationnelles open-source. Il est largement utilisé pour les applications web et offre de bonnes performances.</p>",
-      "mariadb": "<h1>MariaDB</h1><p>MariaDB est un fork de MySQL, créé pour maintenir la liberté du code source. Il est compatible avec MySQL et offre des fonctionnalités supplémentaires.</p>"
+    "SGBD": {
+      "MySQL": {
+        "nom": "MySQL",
+        "description": "MySQL est un système de gestion de bases de données relationnelles open-source. Il est largement utilisé pour les applications web et offre de bonnes performances.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Bases de données relationnelles",
+        "projets": ["SAE 4.01", "Stage 2A"]
+      },
+      "MariaDB": {
+        "nom": "MariaDB",
+        "description": "MariaDB est un fork de MySQL, créé pour maintenir la liberté du code source. Il est compatible avec MySQL et offre des fonctionnalités supplémentaires.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Bases de données relationnelles"
+      }
     },
     "autres": {
-      "git": "<h1>Git</h1><p>Git est un système de contrôle de version distribué qui permet de suivre les modifications du code source. Il est essentiel pour le développement collaboratif.</p>",
-      "github": "<h1>GitHub</h1><p>GitHub est une plateforme d'hébergement de code pour le contrôle de version et la collaboration. Il offre des outils pour la gestion de projet et le développement en équipe.</p>",
-      "gitlab": "<h1>GitLab</h1><p>GitLab est une plateforme DevOps complète qui offre des fonctionnalités de gestion de code source, CI/CD, et gestion de projet.</p>",
-      "trello": "<h1>Trello</h1><p>Trello est un outil de gestion de projet visuel basé sur la méthode Kanban. Il permet d'organiser et de suivre les tâches de manière intuitive.</p>",
-      "phpmyadmin": "<h1>phpMyAdmin</h1><p>phpMyAdmin est une application web de gestion pour MySQL et MariaDB. Il offre une interface graphique pour gérer les bases de données.</p>",
-      "deno": "<h1>Deno</h1><p>Deno est un runtime JavaScript/TypeScript moderne et sécurisé, créé par l'auteur de Node.js. Il offre une meilleure sécurité et un système de modules moderne.</p>",
-      "arduino": "<h1>Arduino</h1><p>Arduino est une plateforme de prototypage électronique open-source. Elle permet de créer des projets interactifs avec des microcontrôleurs.</p>",
-      "obsidian": "<h1>Obsidian</h1><p>Obsidian est un outil de prise de notes basé sur Markdown. Il permet de créer une base de connaissances personnelle avec des liens entre les notes.</p>"
+      "Git": {
+        "nom": "Git",
+        "description": "Git est un système de contrôle de version distribué qui permet de suivre les modifications du code source. Il est essentiel pour le développement collaboratif.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Gestion de versions",
+        "projets": ["SAE 1.01", "SAE 1.02", "SAE 1.05 - 1.06", "SAE 2.05 - 2.06", "Portfolio", "Stage 2A"]
+      },
+      "GitHub": {
+        "nom": "GitHub",
+        "description": "GitHub est une plateforme d'hébergement de code pour le contrôle de version et la collaboration. Il offre des outils pour la gestion de projet et le développement en équipe.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Hébergement de code",
+        "projets": ["SAE 1.01", "SAE 1.02", "SAE 1.05 - 1.06", "SAE 2.05 - 2.06", "Portfolio", "Stage 2A"]
+      },
+      "GitLab": {
+        "nom": "GitLab",
+        "description": "GitLab est une plateforme DevOps complète qui offre des fonctionnalités de gestion de code source, CI/CD, et gestion de projet.",
+        "niveau": "Débutant",
+        "utilisation": "DevOps"
+      },
+      "Trello": {
+        "nom": "Trello",
+        "description": "Trello est un outil de gestion de projet visuel basé sur la méthode Kanban. Il permet d'organiser et de suivre les tâches de manière intuitive.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Gestion de projet"
+      },
+      "phpMyAdmin": {
+        "nom": "phpMyAdmin",
+        "description": "phpMyAdmin est une application web de gestion pour MySQL et MariaDB. Il offre une interface graphique pour gérer les bases de données.",
+        "niveau": "Intermédiaire",
+        "utilisation": "Gestion de bases de données",
+        "projets": ["SAE 3.01", "SAE 4.01", "Stage 2A"]
+      },
+      "Deno": {
+        "nom": "Deno",
+        "description": "Deno est un runtime JavaScript/TypeScript moderne et sécurisé, créé par l'auteur de Node.js. Il offre une meilleure sécurité et un système de modules moderne.",
+        "niveau": "Débutant",
+        "utilisation": "Runtime JavaScript"
+      },
+      "Arduino": {
+        "nom": "Arduino",
+        "description": "Arduino est une plateforme de prototypage électronique open-source. Elle permet de créer des projets interactifs avec des microcontrôleurs.",
+        "niveau": "Notions de base",
+        "utilisation": "Électronique"
+      },
+      "Obsidian": {
+        "nom": "Obsidian",
+        "description": "Obsidian est un outil de prise de notes basé sur Markdown. Il permet de créer une base de connaissances personnelle avec des liens entre les notes.",
+        "niveau": "Avancé",
+        "utilisation": "Prise de notes",
+        "projets": ["Stage 2A"]
+      }
     }
   },
   "projets": {
     "personnels": {
-      "projet-1": "<h1>Projet Personnel 1</h1><p>Description détaillée du premier projet personnel.</p>",
-      "projet-2": "<h1>Projet Personnel 2</h1><p>Description détaillée du deuxième projet personnel.</p>"
+      "Portfolio": {
+        "nom": "Portfolio",
+        "description": "Site web sur lequel vous êtes actuellement",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GitHub", "Vercel", "CSS3", "Inkscape", "VSCode"],
+        "lien": "/"
+      }
     },
     "scolaires": {
-      "projet-1": "<h1>Projet Scolaire 1</h1><p>Description détaillée du premier projet scolaire.</p>",
-      "projet-2": "<h1>Projet Scolaire 2</h1><p>Description détaillée du deuxième projet scolaire.</p>"
+      "SAE101": {
+        "nom": "SAE 1.01",
+        "description": "Création de 3 jeux en C en binôme : mastermind, nombre caché et recherche du quatrième terme d'une suite.",
+        "technologies": ["C", "GitHub", "VSCode"],
+        "lien": ""
+      },
+      "SAE102": {
+        "nom": "SAE 1.02",
+        "description": "Création d'un jeu de mémorix avec une interface en console en C en binôme. Un Makefile a également été créé.",
+        "technologies": ["C", "GitHub", "VSCode"],
+        "lien": ""
+      },
+      "SAE103": {
+        "nom": "SAE 1.03",
+        "description": "Création de deux scripts en Bash avec un site web. L'un des scripts permet de faire une sauvegarde automatique dans un fichier .tar.",
+        "technologies": ["Linux", "Bash", "VSCode"],
+        "lien": ""
+      },
+      "SAE104": {
+        "nom": "SAE 1.04",
+        "description": "Analyse de besoins avec création d'un dictionnaire de données, graphe des dépendances fonctionnelles et vue externe pour chaque besoin. Création d'un dictionnaire des données, un graphe des dépendances focntionnelles, un schéma relationnel et un schéma entité-association.",
+        "technologies": ["SQL", "Looping"],
+        "lien": ""
+      },
+      "SAE105-106": {
+        "nom": "SAE 1.05 - 1.06",
+        "description": "Projet de développement d'un site web statique en groupe de 4 concernant le jeu Minecraft avec une analyse de l'entreprise Sony. Ceci fait suite à une phase de recherche et d'analyse des besoins du client (ici, un professeur).",
+        "technologies": ["HTML5", "CSS3", "VSCode", "Figma", "GitHub"],
+        "lien": ""
+      },
+      "SAE201": {
+        "nom": "SAE 2.01",
+        "description": "Développement d'une application web de gestion de factures. Elle possède un inventaire, un système de modification et de liste de factures.",
+        "technologies": ["HTML5", "CSS3", "Figma", "Whimsical", "TypeScript", "JavaScript", "VSCode"],
+        "lien": ""
+      },
+      "SAE202": {
+        "nom": "SAE 2.02",
+        "description": "Développemment de l'aglorithme de Dijkstra qui est un graphe pour trouver le plus court chemin entre deux points. Il y a donc une gestion de lecture de fichier avec fs. Ce système permet donc d'extraire le minimum d'un graphe, d'obtenir les sommets voisins, le poids d'un arc. L'on peut ainsi construire un graphe isochrone.",
+        "technologies": ["TypeScript", "UML", "VSCode", "Mathématiques", "Graphes"],
+        "lien": ""
+      },
+      "SAE203": {
+        "nom": "SAE 2.03",
+        "description": "Installation virtuelle d'un serveur debian comprenant plusieurs services : Apache (web), FTP, SFTP, DHCP, ainsi que de deux clients virtuels windows et ubuntu, tous reliés par une infrastructure réseau physique comprenant un switch et un routeur",
+        "technologies": ["Linux", "Debian", "Apache", "FTP", "SFTP", "DHCP", "Windows", "Ubuntu", "Switch", "Routeur", "VSCode"],
+        "lien": ""
+      },
+      "SAE204": {
+        "nom": "SAE 2.04",
+        "description": "Suite de la SAE 1.04. Construction d'un jeu de données global et de requêtes suivant des besoins.",
+        "technologies": ["SQL"],
+        "lien": "/projets/scolaires/SAE104"
+      },
+      "SAE205-206": {
+        "nom": "SAE 2.05 - 2.06",
+        "description": "Projet de développement d'une application web d'alumni pour l'IUT de Metz en groupe de 5.",
+        "technologies": ["HTML5", "CSS3", "JavaScript", "PHP", "API", "SQL", "phpMyAdmin", "VSCode", "Figma", "Whimsical", "GitHub"],
+        "lien": ""
+      },
+      "SAE301": {
+        "nom": "SAE 3.01",
+        "description": "Développement d'une application Flutter en groupe de 5 pour l'association de la tablée onirique. Création d'une API en PHP reliée à la base de données SQL avec phpMyAdmin.",
+        "technologies": ["Dart", "Flutter", "SQL", "VSCode", "phpMyAdmin", "PHP"],
+        "lien": ""
+      },
+      "sae401": {
+        "nom": "SAE 4.01",
+        "description": "Correction et développement d'une interface utilisateur d'une application web pour Paul Muller Pulls Moches.",
+        "technologies": ["HTML5", "CSS3", "JavaScript", "MySQL", "phpMyAdmin", "VSCode"],
+        "lien": ""
+      },
+      "stage2A": {
+        "nom": "Stage de deuxième année",
+        "description": "Stage pour l'association MB Music School. Création d'une application web pour la présentation et la gestion de l'association musicale.",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GitHub", "Vercel", "CSS3", "Inkscape", "VSCode", "SQL", "phpMyAdmin", "PHP", "shadcn/ui", "Lucide", "Obsidian", "Figma"],
+        "lien": ""
+      }
     }
   },
   "formation": {
-    "bac": {
-      "nsi": "<h1>Spécialité NSI</h1><p>La spécialité Numérique et Sciences Informatiques du baccalauréat.</p>",
-      "llcer": "<h1>Spécialité LLCER</h1><p>La spécialité Langues, Littératures et Cultures Étrangères et Régionales.</p>",
-      "mathematiques": "<h1>Spécialité Mathématiques</h1><p>La spécialité Mathématiques du baccalauréat.</p>"
+    "Bac": {
+      "NSI": {
+        "nom": "Numérique et Sciences Informatiques",
+        "description": "Cette spécialité du baccalauréat apporte une base en programmation, en algorithmique, en bases de données, en réseaux, en systèmes d'exploitation et en histoire des technologies."
+      },
+      "LLCER": {
+        "nom": "Langues, Littératures et Cultures Étrangères et Régionales",
+        "description": "Cette spécialité du baccalauréat apporte une culture supplémentaire concernant le monde anglophone et son fonctionnement. Grâce à des films, poèmes, livres et musiques, les connaissances et la réflexion sur le monde sont enrichies. Grâce à cette matière et à mon lycée, j'ai passé la certification Cambridge English B2."
+      },
+      "Mathématiques": {
+        "nom": "Mathématiques",
+        "description": "La spécialité Mathématiques du baccalauréat fait suite au programme de seconde.."
+      }
     },
-    "but": {
-      "annee-1": "<h1>Première année BUT Informatique</h1><p>Description du programme de la première année.</p>",
-      "annee-2": "<h1>Deuxième année BUT Informatique</h1><p>Description du programme de la deuxième année.</p>",
-      "annee-3": "<h1>Troisième année BUT Informatique</h1><p>Description du programme de la troisième année.</p>"
+    "BUT": {
+      "annee-1": {
+        "nom": "Première année",
+        "description": "Première année du BUT Informatique avec des projets en C, Bash, SQL et développement web. Les SAE 1.01 à 1.06 couvrent la programmation de base, les scripts système et la conception de sites web.",
+        "competences": ["Programmation en C", "Scripts Bash", "Bases de données SQL", "Développement web (HTML/CSS)", "Git et GitHub"]
+      },
+      "annee-2": {
+        "nom": "Deuxième année",
+        "description": "Deuxième année du BUT Informatique avec des projets en développement web, algorithmique, réseaux et bases de données. Les SAE 2.01 à 2.06 couvrent le développement d'applications web, l'algorithmique avancée, l'administration système et la gestion de bases de données.",
+        "competences": ["Développement web (TypeScript, PHP)", "Algorithmique", "Administration système", "Bases de données", "Gestion de projet"]
+      },
+      "annee-3": {
+        "nom": "Troisième année",
+        "description": "Troisième année du BUT Informatique avec des projets en développement mobile et web. Les SAE 3.01 et 4.01 couvrent le développement d'applications mobiles avec Flutter et la correction d'interfaces web.",
+        "competences": ["Développement mobile (Flutter/Dart)", "Développement web avancé", "Projet professionnel", "Stage"]
+      }
+    },
+    "Certification": {
+      "PIX": {
+        "nom": "PIX",
+        "description": "Certification des compétences numériques",
+        "niveau": "Avancé",
+        "date": "2023",
+        "domaines": ["Information et données", "Communication et collaboration", "Création de contenu", "Protection et sécurité", "Environnement numérique"]
+      },
+      "Cambridge": {
+        "nom": "Cambridge English",
+        "description": "Certification en anglais de niveau B2 passée en terminale grâce à des cours de LLCER.",
+        "niveau": "B2",
+        "date": "2023",
+        "competences": ["Compréhension écrite", "Compréhension orale", "Expression écrite", "Expression orale", "Utilisation de l'anglais"]
+      }
     }
   }
 } 

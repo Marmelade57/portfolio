@@ -38,43 +38,72 @@ export default function RootLayout({
               <a href="/">Accueil</a>
             </div>
             <div className="menu-item">
+              <a href="/projets">Projets</a>
+              <div className="sousmenu">
+                <div className="menu-item">
+                  <a href="/projets/personnels">Projets personnels</a>
+                  <div className="soussousmenu">
+                    <a href="/projets/personnels/Portfolio">Portfolio</a>
+                  </div>
+                </div>
+                <div className="menu-item">
+                  <a href="/projets/scolaires">Projets scolaires</a>
+                  <div className="soussousmenu">
+                    <a href="/projets/scolaires/SAE101">SAE 1.01</a>
+                    <a href="/projets/scolaires/SAE102">SAE 1.02</a>
+                    <a href="/projets/scolaires/SAE103">SAE 1.03</a>
+                    <a href="/projets/scolaires/SAE104">SAE 1.04</a>
+                    <a href="/projets/scolaires/SAE105-106">SAE 1.05 - 1.06</a>
+                    <a href="/projets/scolaires/SAE201">SAE 2.01</a>
+                    <a href="/projets/scolaires/SAE202">SAE 2.02</a>
+                    <a href="/projets/scolaires/SAE203">SAE 2.03</a>
+                    <a href="/projets/scolaires/SAE204">SAE 2.04</a>
+                    <a href="/projets/scolaires/SAE205-206">SAE 2.05 - 2.06</a>
+                    <a href="/projets/scolaires/SAE301">SAE 3.01</a>
+                    <a href="/projets/scolaires/SAE401">SAE 4.01</a>
+                    <a href="/projets/scolaires/Stage2A">Stage de deuxième année</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="menu-item">
               <a href="/langages">Langages et Frameworks</a>
               <div className="sousmenu">
                 <div className="menu-item">
                   <a href="/langages/web">Web</a>
                   <div className="soussousmenu">
-                    <a href="/langages/web/html5">HTML5</a>
-                    <a href="/langages/web/css3">CSS3</a>
-                    <a href="/langages/web/javascript">JavaScript</a>
-                    <a href="/langages/web/php">PHP</a>
-                    <a href="/langages/web/typescript">TypeScript</a>
+                    <a href="/langages/web/HTML5">HTML5</a>
+                    <a href="/langages/web/CSS3">CSS3</a>
+                    <a href="/langages/web/JavaScript">JavaScript</a>
+                    <a href="/langages/web/PHP">PHP</a>
+                    <a href="/langages/web/TypeScript">TypeScript</a>
                   </div>
                 </div>
                 <div className="menu-item">
                   <a href="/langages/programmation">Programmation</a>
                   <div className="soussousmenu">
-                    <a href="/langages/programmation/python">Python</a>
-                    <a href="/langages/programmation/java">Java</a>
-                    <a href="/langages/programmation/c">C</a>
-                    <a href="/langages/programmation/bash">Bash</a>
-                    <a href="/langages/programmation/sql">SQL</a>
-                    <a href="/langages/programmation/markdown">Markdown</a>
+                    <a href="/langages/programmation/Python">Python</a>
+                    <a href="/langages/programmation/Java">Java</a>
+                    <a href="/langages/programmation/C">C</a>
+                    <a href="/langages/programmation/Bash">Bash</a>
+                    <a href="/langages/programmation/SQL">SQL</a>
+                    <a href="/langages/programmation/Markdown">Markdown</a>
                   </div>
                 </div>
                 <div className="menu-item">
                   <a href="/langages/framework">Framework</a>
                   <div className="soussousmenu">
-                    <a href="/langages/framework/nextjs">Next.js</a>
-                    <a href="/langages/framework/tailwindcss">Tailwind CSS</a>
-                    <a href="/langages/framework/flutter">Flutter</a>
-                    <a href="/langages/framework/shadcnui">shadcn/ui</a>
-                    <a href="/langages/framework/lucide">Lucide</a>
+                    <a href="/langages/framework/Next.js">Next.js</a>
+                    <a href="/langages/framework/TailwindCSS">Tailwind CSS</a>
+                    <a href="/langages/framework/Flutter">Flutter</a>
+                    <a href="/langages/framework/ShadcnUi">shadcn/ui</a>
+                    <a href="/langages/framework/Lucide">Lucide</a>
                   </div>
                 </div>
                 <div className="menu-item">
                   <a href="/langages/mobile">Mobile</a>
                   <div className="soussousmenu">
-                    <a href="/langages/mobile/dart">Dart</a>
+                    <a href="/langages/mobile/Dart">Dart</a>
                   </div>
                 </div>
               </div>
@@ -85,55 +114,36 @@ export default function RootLayout({
                 <div className="menu-item">
                   <a href="/logiciels/traitement-des-images">Traitement des images</a>
                   <div className="soussousmenu">
-                    <a href="/logiciels/traitement-des-images/inkscape">Inkscape</a>
-                    <a href="/logiciels/traitement-des-images/gimp">Gimp</a>
-                    <a href="/logiciels/traitement-des-images/canva">Canva</a>
+                    <a href="/logiciels/traitement-des-images/Inkscape">Inkscape</a>
+                    <a href="/logiciels/traitement-des-images/Gimp">Gimp</a>
+                    <a href="/logiciels/traitement-des-images/Canva">Canva</a>
                   </div>
                 </div>
                 <div className="menu-item">
-                  <a href="/logiciels/ide">IDE</a>
+                  <a href="/logiciels/IDE">IDE</a>
                   <div className="soussousmenu">
-                    <a href="/logiciels/ide/vscode">VSCode</a>
-                    <a href="/logiciels/ide/vercel">Vercel</a>
+                    <a href="/logiciels/IDE/VSCode">Visual Studio Code</a>
+                    <a href="/logiciels/IDE/Vercel">Vercel</a>
                   </div>
                 </div>
                 <div className="menu-item">
-                  <a href="/logiciels/sgbd">SGBD</a>
+                  <a href="/logiciels/SGBD">SGBD</a>
                   <div className="soussousmenu">
-                    <a href="/logiciels/sgbd/mysql">MySQL</a>
-                    <a href="/logiciels/sgbd/mariadb">MariaDB</a>
+                    <a href="/logiciels/SGBD/MySQL">MySQL</a>
+                    <a href="/logiciels/SGBD/MariaDB">MariaDB</a>
                   </div>
                 </div>
                 <div className="menu-item">
                   <a href="/logiciels/autres">Autres</a>
                   <div className="soussousmenu">
-                    <a href="/logiciels/autres/git">Git</a>
-                    <a href="/logiciels/autres/github">GitHub</a>
-                    <a href="/logiciels/autres/gitlab">GitLab</a>
-                    <a href="/logiciels/autres/trello">Trello</a>
-                    <a href="/logiciels/autres/phpmyadmin">phpMyAdmin</a>
-                    <a href="/logiciels/autres/deno">Deno</a>
-                    <a href="/logiciels/autres/arduino">Arduino</a>
-                    <a href="/logiciels/autres/obsidian">Obsidian</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="menu-item">
-              <a href="/projets">Projets</a>
-              <div className="sousmenu">
-                <div className="menu-item">
-                  <a href="/projets/personnels">Projets personnels</a>
-                  <div className="soussousmenu">
-                    <a href="/projets/personnels/projet-1">Projet 1</a>
-                    <a href="/projets/personnels/projet-2">Projet 2</a>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <a href="/projets/scolaires">Projets scolaires</a>
-                  <div className="soussousmenu">
-                    <a href="/projets/scolaires/projet-1">Projet 1</a>
-                    <a href="/projets/scolaires/projet-2">Projet 2</a>
+                    <a href="/logiciels/autres/Git">Git</a>
+                    <a href="/logiciels/autres/GitHub">GitHub</a>
+                    <a href="/logiciels/autres/GitLab">GitLab</a>
+                    <a href="/logiciels/autres/Trello">Trello</a>
+                    <a href="/logiciels/autres/phpMyAdmin">phpMyAdmin</a>
+                    <a href="/logiciels/autres/Deno">Deno</a>
+                    <a href="/logiciels/autres/Arduino">Arduino</a>
+                    <a href="/logiciels/autres/Obsidian">Obsidian</a>
                   </div>
                 </div>
               </div>
@@ -142,19 +152,26 @@ export default function RootLayout({
               <a href="/formation">Formation</a>
               <div className="sousmenu">
                 <div className="menu-item">
-                  <a href="/formation/bac">Baccalauréat général</a>
+                  <a href="/formation/Bac">Baccalauréat général</a>
                   <div className="soussousmenu">
-                    <a href="/formation/bac/nsi">Spécialité NSI</a>
-                    <a href="/formation/bac/llcer">Spécialité LLCER</a>
-                    <a href="/formation/bac/mathematiques">Spécialité Mathématiques</a>
+                    <a href="/formation/Bac/NSI">Numérique et Sciences Informatiques</a>
+                    <a href="/formation/Bac/LLCER">Langues, Littératures et Cultures Étrangères</a>
+                    <a href="/formation/Bac/Mathématiques">Mathématiques</a>
                   </div>
                 </div>
                 <div className="menu-item">
-                  <a href="/formation/but">BUT Informatique</a>
+                  <a href="/formation/BUT">BUT Informatique</a>
                   <div className="soussousmenu">
-                    <a href="/formation/but/annee-1">Première année</a>
-                    <a href="/formation/but/annee-2">Deuxième année</a>
-                    <a href="/formation/but/annee-3">Troisième année</a>
+                    <a href="/formation/BUT/annee-1">Première année</a>
+                    <a href="/formation/BUT/annee-2">Deuxième année</a>
+                    <a href="/formation/BUT/annee-3">Troisième année</a>
+                  </div>
+                </div>
+                <div className="menu-item">
+                  <a href="/formation/Certification">Certifications</a>
+                  <div className="soussousmenu">
+                    <a href="/formation/Certification/PIX">PIX</a>
+                    <a href="/formation/Certification/Cambridge">Cambridge English</a>
                   </div>
                 </div>
               </div>
