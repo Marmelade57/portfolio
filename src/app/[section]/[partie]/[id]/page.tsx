@@ -60,7 +60,7 @@ function ItemContent({ itemData }: { itemData: ContentItem }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6">
-          {itemData.niveau && (
+          {itemData.niveau && itemData.niveau !== "" && (
             <div>
               <h2>Niveau</h2>
               <p>{itemData.niveau}</p>

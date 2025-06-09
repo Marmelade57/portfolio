@@ -54,7 +54,7 @@ export default async function PartiePage({ params }: { params: PageParams }) {
 
   return (
     <main>
-      <section className="w-[60svw]">
+      <section className="w-[50svw]">
         <h1 className="capitalize">
           {partie.replace(/-/g, " ")}
         </h1>
