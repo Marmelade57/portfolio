@@ -36,9 +36,7 @@ type ContentSection = {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const section = params.section;
-  const partie = params.partie;
-  const id = params.id;
+  const { section, partie, id } = params;
 
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
   const partieData = sectionData?.[partie];
@@ -58,9 +56,7 @@ export async function generateMetadata({
 }
 
 export default function DetailPage({ params }: PageProps) {
-  const section = params.section;
-  const partie = params.partie;
-  const id = params.id;
+  const { section, partie, id } = params;
 
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
   const partieData = sectionData?.[partie];
