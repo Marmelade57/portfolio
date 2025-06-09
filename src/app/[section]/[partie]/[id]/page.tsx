@@ -24,6 +24,10 @@ type ContentSection = {
   [key: string]: ContentPart;
 };
 
+type PageParams = Promise<{
+  [key: string]: string | string[] | undefined;
+}>;
+
 function getItemData(params: { [key: string]: string | string[] | undefined }): ContentItem | undefined {
   const section = params.section as string;
   const partie = params.partie as string;
@@ -146,13 +150,15 @@ function ItemContent({ itemData }: { itemData: ContentItem }) {
   );
 }
 
-export async function generateMetadata({ params }: { params: { [key: string]: string | string[] | undefined } }): Promise<Metadata> {
-  const itemData = getItemData(params);
-  return generatePageMetadata(itemData, params.partie as string);
+export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const itemData = getItemData(resolvedParams);
+  return generatePageMetadata(itemData, resolvedParams.partie as string);
 }
 
-export default function Page({ params }: { params: { [key: string]: string | string[] | undefined } }) {
-  const itemData = getItemData(params);
+export default async function Page({ params }: { params: PageParams }) {
+  const resolvedParams = await params;
+  const itemData = getItemData(resolvedParams);
 
   if (!itemData) {
     notFound();
