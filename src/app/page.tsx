@@ -37,7 +37,8 @@ export default function Home() {
         </article>
         <article>
           <h2>Passionnée de langues</h2>
-          <p>Certification Cambridge Anglais niveau B2</p>
+          <a href="/formation/Certification/Cambridge">Certification Cambridge Anglais niveau B2</a>
+          <p>Apprends l'<a href="https://esperanto-france.org/esperanto">esperanto</a> en autodidacte</p>
         </article>
         <article>
           <h2>Engagée dans ses études</h2>
@@ -353,7 +354,6 @@ export default function Home() {
             <figure></figure>
           </div>
         </article>
-        <article></article>
       </section>
     </main>
   );
