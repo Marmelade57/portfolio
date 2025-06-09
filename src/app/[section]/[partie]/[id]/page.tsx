@@ -48,7 +48,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function DetailPage({
+export default async function Page({
   params,
 }: {
   params: { section: string; partie: string; id: string };
