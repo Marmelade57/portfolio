@@ -24,15 +24,13 @@ type ContentSection = {
   [key: string]: ContentPart;
 };
 
-interface PageProps {
-  params: {
-    section: string;
-    partie: string;
-    id: string;
-  };
-}
+type PageParams = {
+  section: string;
+  partie: string;
+  id: string;
+};
 
-function getItemData(params: PageProps['params']): ContentItem | undefined {
+function getItemData(params: PageParams): ContentItem | undefined {
   const { section, partie, id } = params;
   const sectionData = content[section as keyof typeof content] as ContentSection | undefined;
   const partieData = sectionData?.[partie];
@@ -151,12 +149,12 @@ function ItemContent({ itemData }: { itemData: ContentItem }) {
   );
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
   const itemData = getItemData(params);
   return generatePageMetadata(itemData, params.partie);
 }
 
-export default function Page({ params }: PageProps) {
+export default function Page({ params }: { params: PageParams }) {
   const itemData = getItemData(params);
 
   if (!itemData) {
